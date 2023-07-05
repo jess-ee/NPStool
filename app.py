@@ -1,6 +1,5 @@
 #import dependencies
 import os 
-from apikey import apikey
 import langchain
 import streamlit as st 
 import time
@@ -16,7 +15,7 @@ from langchain.prompts.chat import (
 )
 
 from langchain.chains import LLMChain
-os.environ['OPENAI_API_KEY'] = apikey
+apikey = os.getenv('OPENAI_API_KEY')
 
 #App framework
 
